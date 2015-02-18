@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" configuration-policy="optional" deactivate="deactivate" immediate="false" name="org.eclipse.smarthome.core.dynamic">
+   <implementation class="org.eclipse.smarthome.core.dynamic.internal.link.DynamicItemChannelLinkProvider"/>
+   <service>
+      <provide interface="org.eclipse.smarthome.core.thing.link.ItemChannelLinkProvider"/>
+      <provide interface="org.eclipse.smarthome.core.dynamic.link.DynamicItemChannelLinker"/>
+   </service>
+   
+  	 
+  
+</scr:component>

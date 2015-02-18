@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" configuration-policy="optional" deactivate="deactivate" immediate="false" name="com.yetu.gateway.home.binding.zwave.itemprovider">
+   <implementation class="org.eclipse.smarthome.core.dynamic.internal.thing.DynamicThingItemsProviderImpl"/>
+   <service>
+      <provide interface="org.eclipse.smarthome.core.items.ItemProvider"/>
+      <provide interface="org.eclipse.smarthome.core.dynamic.thing.DynamicThingItemsProvider"/>
+   </service>
+   
+   
+   <reference bind="setItemRegistry" cardinality="1..1" interface="org.eclipse.smarthome.core.items.ItemRegistry" name="ItemRegistry" policy="static" unbind="unsetItemRegistry"/>
+   <reference bind="setManagedThingProvider" cardinality="1..1" interface="org.eclipse.smarthome.core.thing.ManagedThingProvider" name="ManagedThingProvider" policy="static" unbind="unsetManagedThingProvider"/>
+   <reference bind="setChannelLinker" cardinality="1..1" interface="org.eclipse.smarthome.core.dynamic.link.DynamicItemChannelLinker" name="ChannelItemLinker" policy="static" unbind="unsetChannelLinker"/>
+</scr:component>

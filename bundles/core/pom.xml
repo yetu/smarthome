@@ -32,6 +32,7 @@
     <module>org.eclipse.smarthome.core.binding.xml.test</module>
     <module>org.eclipse.smarthome.core.thing.xml</module>
     <module>org.eclipse.smarthome.core.thing.xml.test</module>
+    <module>org.eclipse.smarthome.core.dynamic</module>
   </modules>
 
 </project>
