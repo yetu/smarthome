@@ -335,6 +335,14 @@ public class DynamicThingItemsProviderImpl implements ItemProvider, ProviderChan
 		}
 	}
 	
+	
+	/**
+	 * Method will be called by OSGi framework to end the bundle.
+	 */
+	protected void deactivate() {
+		
+	}
+	
 	/**
 	 * Returns whether the activate method was called or not.
 	 * @return
@@ -425,6 +433,12 @@ public class DynamicThingItemsProviderImpl implements ItemProvider, ProviderChan
 		this.managedThingProvider = managedThingProvider;		
 		this.managedThingProvider.addProviderChangeListener(this);
 		autoAddAllItems();
+	}
+	
+	public void unsetManagedThingProvider(ManagedThingProvider managedThingProvider){
+		logger.debug("ManagedThingProvider {} removed",managedThingProvider);
+		managedThingProvider.removeProviderChangeListener(this);
+		this.managedThingProvider = null;
 	}
 	
 	/**
