@@ -6,9 +6,7 @@ Bundle-Version: 0.8.0.qualifier
 Bundle-Vendor: yetu AG
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ClassPath: .
-Import-Package: com.google.common.collect,
- org.apache.commons.lang,
- org.eclipse.smarthome.config.core,
+Import-Package: org.eclipse.smarthome.config.core,
  org.eclipse.smarthome.config.discovery,
  org.eclipse.smarthome.core.binding,
  org.eclipse.smarthome.core.common.registry,
@@ -17,17 +15,10 @@ Import-Package: com.google.common.collect,
  org.eclipse.smarthome.core.library.types,
  org.eclipse.smarthome.core.thing,
  org.eclipse.smarthome.core.thing.binding,
- org.eclipse.smarthome.core.thing.binding.builder,
  org.eclipse.smarthome.core.thing.link,
  org.eclipse.smarthome.core.thing.type,
  org.eclipse.smarthome.core.types,
- org.jupnp,
- org.jupnp.controlpoint,
- org.jupnp.model.meta,
- org.osgi.framework,
- org.osgi.service.cm,
- org.osgi.service.upnp,
- org.osgi.util.tracker,
+ org.osgi.service.cm;version="1.5.0",
  org.slf4j
 Service-Component: OSGI-INF/*
 Export-Package: org.eclipse.smarthome.core.dynamic.link,
