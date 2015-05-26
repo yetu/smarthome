@@ -224,7 +224,7 @@ public class DynamicThingItemsProviderImpl implements ItemProvider, ProviderChan
 				item = new SwitchItem(itemName);
 			}
 			if ("StringType".equalsIgnoreCase(itemType)){
-				item = new StringItem(itemType);
+				item = new StringItem(itemName);
 			}
 		}
 		
