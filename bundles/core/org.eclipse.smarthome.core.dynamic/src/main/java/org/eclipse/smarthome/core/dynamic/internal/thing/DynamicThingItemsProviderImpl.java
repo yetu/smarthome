@@ -15,6 +15,7 @@ import org.eclipse.smarthome.core.items.Item;
 import org.eclipse.smarthome.core.items.ItemProvider;
 import org.eclipse.smarthome.core.items.ItemRegistry;
 import org.eclipse.smarthome.core.library.items.NumberItem;
+import org.eclipse.smarthome.core.library.items.StringItem;
 import org.eclipse.smarthome.core.library.items.SwitchItem;
 import org.eclipse.smarthome.core.thing.Channel;
 import org.eclipse.smarthome.core.thing.ManagedThingProvider;
@@ -221,6 +222,9 @@ public class DynamicThingItemsProviderImpl implements ItemProvider, ProviderChan
 			}
 			if ("Switch".equalsIgnoreCase(itemType)){
 				item = new SwitchItem(itemName);
+			}
+			if ("StringType".equalsIgnoreCase(itemType)){
+				item = new StringItem(itemType);
 			}
 		}
 		
